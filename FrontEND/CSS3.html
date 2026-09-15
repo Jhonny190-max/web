@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS3 - Práctica</title>
+  <link rel="stylesheet" href="CSS.css">
+</head>
+<body>
+  <header>
+    <h1>CSS3</h1>
+    <p>Práctica de selectores, Box Model, Display, Position, Grid y Flexbox</p>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">INDEX</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Selectores</h2>
+      <p>Selector de elemento: este párrafo recibe el estilo general de <code>p</code>.</p>
+      <p class="destacado">Selector de clase: este elemento utiliza <code>.destacado</code>.</p>
+      <p id="titulo-id">Selector de ID: este elemento utiliza <code>#titulo-id</code>.</p>
+
+      <div class="atributo">
+        <label>Selector de atributo</label>
+        <input type="text" placeholder='input[type="text"]'>
+      </div>
+    </section>
+
+    <section>
+      <h2>Box Model</h2>
+      <div class="caja">
+        <strong>Contenido</strong>
+        <p>Margin: espacio externo · Border: borde · Padding: espacio interno.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Display</h2>
+      <div class="block">Display: block</div>
+      <div class="inline-demo">A</div>
+      <div class="inline-demo">B</div>
+      <div class="inline-demo">C</div>
+
+      <div class="inline-block-demo">Inline-block 1</div>
+      <div class="inline-block-demo">Inline-block 2</div>
+      <div class="oculto">Este elemento usa display: none.</div>
+    </section>
+
+    <section>
+      <h2>Position</h2>
+      <div class="position-static">Caja estática</div>
+      <div class="position-relative">Caja relativa</div>
+
+      <div class="contenedor-position">
+        <div class="position-absolute">Caja absoluta</div>
+      </div>
+
+      <div class="position-sticky">Caja sticky: desplázate para comprobarlo</div>
+      <p class="espacio-scroll">Contenido de prueba para observar el comportamiento de sticky al hacer scroll.</p>
+    </section>
+
+    <section>
+      <h2>Border y border-radius</h2>
+      <div class="formas">
+        <div class="shape shape-square"></div>
+        <div class="shape shape-circle"></div>
+        <div class="shape shape-rounded"></div>
+        <div class="shape shape-asymmetric"></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Grid</h2>
+      <div class="grid-container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Flexbox</h2>
+      <div class="flex-container">
+        <div class="flex-item">Caja 1</div>
+        <div class="flex-item">Caja 2</div>
+        <div class="flex-item">Caja 3</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <nav>
+      <a href="html5.html">HTML5</a>
+      <a href="css3.html">CSS3</a>
+      <a href="html5.html#contacto">Contacto</a>
+    </nav>
+    <p>&copy; 2026 Desarrollo Web Full Stack</p>
+  </footer>
+</body>
+</html>

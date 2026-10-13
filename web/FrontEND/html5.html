@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML5 - Maquetación</title>
+  <link rel="stylesheet" href="CSS.css">
+</head>
+<body>
+  <header>
+    <h1>Desarrollo Web Full Stack</h1>
+    <p>Práctica HTML5: maquetación semántica</p>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">INDEX</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="sobremi">
+      <h2>Sobre mí</h2>
+      <p>
+        Esta página demuestra el uso de las etiquetas semánticas de HTML5:
+        header, nav, main, section, article, aside y footer.
+      </p>
+    </section>
+
+    <section id="proyectos">
+      <h2>Proyectos</h2>
+
+      <article>
+        <h3>Proyecto 1</h3>
+        <p>Maquetación de una página web utilizando HTML5 semántico.</p>
+        <a href="CSS3.html">Ver práctica CSS3</a>
+      </article>
+
+      <article>
+        <h3>Proyecto 2</h3>
+        <p>Aplicación de estilos, Box Model, Grid y Flexbox con CSS3.</p>
+      </article>
+
+      <article>
+        <h3>Proyecto 3</h3>
+        <p>Formulario HTML5 con campos identificados mediante label, id y name.</p>
+      </article>
+    </section>
+
+    <aside>
+      <h2>Contenido relacionado</h2>
+      <p>HTML5 permite crear estructuras más accesibles y comprensibles para usuarios y motores de búsqueda.</p>
+      <a href="https://github.com/Jhonny190-max/html.git" target="_blank" rel="noopener">GitHub HTML5</a>
+    </aside>
+
+    <section id="contacto">
+      <h2>Formulario</h2>
+      <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
+
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com">
+
+        <label for="comentario">Comentario:</label>
+        <textarea id="comentario" name="comentario" rows="4" placeholder="Escribe un comentario"></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <nav>
+      <a href="html5.html">HTML5</a>
+      <a href="css3.html">CSS3</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <p>&copy; 2026 Desarrollo Web Full Stack</p>
+  </footer>
+</body>
+</html>

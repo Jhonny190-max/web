@@ -1,0 +1,16 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Times New Roman', serif;
+}
+body{
+    height: 100vh;
+    background-color: purple;
+    padding: 30px;
+}
+.container{
+    width: 100%;
+    background: black;
+    color: aliceblue;
+    border-radius: 4%;
+}       

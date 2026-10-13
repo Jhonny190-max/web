@@ -1,0 +1,348 @@
+:root {
+    --azul-undc: #003b70;
+    --azul-claro: #075b9c;
+    --amarillo-undc: #f2ad00;
+    --blanco: #ffffff;
+    --gris: #f4f4f4;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   CABECERA
+========================= */
+
+.cabecera {
+    background: var(--azul-undc);
+    padding: 15px 0;
+}
+
+.cabecera-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-undc {
+    width: 280px;
+    max-width: 30%;
+    height: auto;
+}
+
+.accesos-rapidos {
+    display: flex;
+    gap: 8px;
+}
+
+.acceso {
+    background: white;
+    color: var(--azul-undc);
+    min-width: 130px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.acceso:hover {
+    transform: translateY(-3px);
+}
+
+.acceso-rojo {
+    background: #b82d35;
+    color: white;
+}
+
+
+/* =========================
+   MENU AMARILLO
+========================= */
+
+.menu-principal {
+    background: var(--amarillo-undc);
+    position: relative;
+    z-index: 100;
+}
+
+.menu-lista {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-lista li a,
+.dropdown-boton {
+    display: block;
+
+    padding: 18px 20px;
+
+    color: var(--azul-undc);
+    text-decoration: none;
+
+    font-weight: bold;
+    font-size: 14px;
+
+    background: transparent;
+    border: none;
+}
+
+.menu-lista li a:hover,
+.dropdown-boton:hover {
+    background: #d99600;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    position: relative;
+    height: 550px;
+    overflow: hidden;
+}
+
+.hero-imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(0, 35, 70, 0.8),
+        rgba(0, 35, 70, 0.15)
+    );
+}
+
+.hero-contenido {
+    position: absolute;
+
+    top: 50%;
+    left: 10%;
+
+    transform: translateY(-50%);
+
+    color: white;
+    max-width: 600px;
+}
+
+.hero-contenido h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hero-contenido p {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   BOTON
+========================= */
+
+.boton-amarillo {
+    display: inline-block;
+
+    background: var(--amarillo-undc);
+    color: #222;
+
+    padding: 14px 25px;
+
+    border-radius: 5px;
+
+    text-decoration: none;
+    border: none;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.boton-amarillo:hover {
+    background: #d99600;
+    color: white;
+}
+
+
+/* =========================
+   SECCIONES
+========================= */
+
+.seccion {
+    padding: 70px 0;
+}
+
+.titulo {
+    text-align: center;
+
+    color: var(--azul-undc);
+
+    font-size: 32px;
+
+    font-weight: bold;
+
+    margin-bottom: 45px;
+}
+
+
+/* =========================
+   TARJETAS
+========================= */
+
+.tarjeta {
+    height: 100%;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 5px;
+
+    border-top: 5px solid var(--amarillo-undc);
+
+    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+}
+
+.tarjeta h3 {
+    color: var(--azul-undc);
+    font-weight: bold;
+}
+
+
+/* =========================
+   CARRERAS
+========================= */
+
+.carreras {
+    background: var(--gris);
+}
+
+.carrera-card {
+    height: 100%;
+
+    border: none;
+
+    border-top: 5px solid var(--azul-undc);
+
+    box-shadow: 0 3px 12px rgba(0,0,0,0.10);
+}
+
+.carrera-card h3 {
+    color: var(--azul-undc);
+    font-weight: bold;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: var(--azul-undc);
+
+    color: white;
+
+    padding: 40px 0;
+}
+
+footer h3 {
+    font-weight: bold;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 992px) {
+
+    .cabecera-contenido {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .accesos-rapidos {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu-lista {
+        flex-wrap: wrap;
+    }
+
+    .hero-contenido h1 {
+        font-size: 38px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .logo-undc {
+        width: 220px;
+    }
+
+    .accesos-rapidos {
+        display: none;
+    }
+
+    .menu-lista {
+        flex-direction: column;
+    }
+
+    .menu-lista li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero {
+        height: 450px;
+    }
+
+    .hero-contenido {
+        left: 5%;
+        right: 5%;
+    }
+
+    .hero-contenido h1 {
+        font-size: 32px;
+    }
+
+    .hero-contenido p {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MailFlow - Sistema de notificaciones por correo electrónico desarrollado con HTML5, Tailwind CSS, Flowbite, JavaScript y EmailJS." />
+  <meta name="author" content="Proyecto académico - Desarrollo Web Full Stack" />
+  <title>MailFlow · Sistema de notificaciones</title>
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%234f46e5'/%3E%3Cpath d='M5 8l7 5 7-5' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Crect x='4' y='6' width='16' height='12' rx='2' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./dist/output.css" />
+</head>
+<body class="flex min-h-screen flex-col">
+
+  <!-- ==================== ENCABEZADO ==================== -->
+  <header class="sticky top-0 z-40 border-b border-navy-100 bg-white/80 backdrop-blur-md">
+    <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
+      <a href="#" class="flex items-center gap-3" aria-label="Inicio de MailFlow">
+        <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-accent-500 to-navy-700 text-white shadow-soft">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="5" width="18" height="14" rx="2" />
+            <path d="m3 7 9 6 9-6" />
+          </svg>
+        </span>
+        <span class="leading-tight">
+          <span class="block text-lg font-extrabold tracking-tight text-navy-900">MailFlow</span>
+          <span class="block text-xs font-medium text-navy-500">Sistema de notificaciones</span>
+        </span>
+      </a>
+
+      <span class="badge bg-accent-50 text-accent-700 ring-1 ring-inset ring-accent-200">
+        <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 10 12 4 2 10l10 6 10-6Z" />
+          <path d="M6 12v5c0 1 2 3 6 3s6-2 6-3v-5" />
+        </svg>
+        Proyecto académico
+      </span>
+    </div>
+  </header>
+
+  <!-- ==================== CONTENIDO PRINCIPAL ==================== -->
+  <main class="mx-auto w-full max-w-6xl flex-1 px-4 py-10 sm:px-6 lg:py-14">
+
+    <!-- Hero -->
+    <section class="mb-10 grid items-center gap-8 lg:grid-cols-2" aria-labelledby="hero-title">
+      <div class="animate-fade-in-up">
+        <span class="badge mb-4 bg-white text-accent-700 shadow-soft ring-1 ring-inset ring-navy-100">
+          <span class="status-dot bg-emerald-500" aria-hidden="true"></span>
+          Notificaciones por correo en tiempo real
+        </span>
+        <h1 id="hero-title" class="text-4xl font-extrabold leading-tight tracking-tight text-navy-900 sm:text-5xl">
+          Envía tu mensaje con <span class="text-gradient">facilidad</span>
+        </h1>
+        <p class="mt-4 max-w-xl text-lg text-navy-600">
+          Completa el formulario y recibe una confirmación por correo electrónico.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3 text-sm text-navy-500">
+          <span class="badge bg-white shadow-soft ring-1 ring-inset ring-navy-100">HTML5 + Tailwind</span>
+          <span class="badge bg-white shadow-soft ring-1 ring-inset ring-navy-100">Flowbite</span>
+          <span class="badge bg-white shadow-soft ring-1 ring-inset ring-navy-100">EmailJS</span>
+        </div>
+      </div>
+
+      <!-- Ilustración decorativa -->
+      <div class="hidden justify-center lg:flex" aria-hidden="true">
+        <div class="relative animate-float">
+          <div class="card w-72 p-6">
+            <div class="flex items-center gap-3">
+              <span class="flex h-10 w-10 items-center justify-center rounded-full bg-accent-100 text-accent-700">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13" /><path d="M22 2 15 22l-4-9-9-4 20-7Z" /></svg>
+              </span>
+              <div class="h-2.5 w-28 rounded-full bg-navy-100"></div>
+            </div>
+            <div class="mt-5 space-y-3">
+              <div class="h-2 w-full rounded-full bg-navy-50"></div>
+              <div class="h-2 w-4/5 rounded-full bg-navy-50"></div>
+              <div class="h-2 w-3/5 rounded-full bg-navy-50"></div>
+            </div>
+            <button type="button" tabindex="-1" class="mt-5 inline-flex items-center gap-2 rounded-lg bg-accent-600 px-4 py-2 text-xs font-semibold text-white">
+              Enviar correo
+            </button>
+          </div>
+          <div class="absolute -bottom-6 -left-8 card flex items-center gap-2 px-4 py-3">
+            <span class="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+            </span>
+            <span class="text-sm font-semibold text-navy-700">Correo enviado</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contenido: formulario + panel de estado -->
+    <div class="grid gap-6 lg:grid-cols-3">
+
+      <!-- Formulario -->
+      <section class="lg:col-span-2" aria-labelledby="form-title">
+        <div class="card animate-fade-in-up p-6 sm:p-8">
+          <div class="mb-6">
+            <h2 id="form-title" class="text-xl font-bold text-navy-900">Datos del mensaje</h2>
+            <p class="mt-1 text-sm text-navy-500">Todos los campos son obligatorios. Revisaremos el formato antes de enviar.</p>
+          </div>
+
+          <!-- Alerta de respuesta (Flowbite alert) -->
+          <div id="form-alert" class="mb-6 hidden" role="alert" aria-live="polite"></div>
+
+          <form id="mailflow-form" novalidate>
+            <!-- Nombre -->
+            <div class="mb-5">
+              <label for="nombre" class="field-label">
+                <svg class="h-4 w-4 text-accent-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
+                Nombres y apellidos
+              </label>
+              <input type="text" id="nombre" name="nombre" class="field-input" placeholder="Ej. María Fernández Rojas"
+                autocomplete="name" aria-required="true" aria-describedby="error-nombre" />
+              <p class="field-error" id="error-nombre" role="alert"></p>
+            </div>
+
+            <!-- Correo -->
+            <div class="mb-5">
+              <label for="email" class="field-label">
+                <svg class="h-4 w-4 text-accent-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></svg>
+                Correo electrónico destinatario
+              </label>
+              <input type="email" id="email" name="email" class="field-input" placeholder="destinatario@correo.com"
+                autocomplete="email" inputmode="email" aria-required="true" aria-describedby="error-email" />
+              <p class="field-error" id="error-email" role="alert"></p>
+            </div>
+
+            <!-- Asunto -->
+            <div class="mb-5">
+              <label for="asunto" class="field-label">
+                <svg class="h-4 w-4 text-accent-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7V5h16v2" /><path d="M9 20h6" /><path d="M12 5v15" /></svg>
+                Asunto
+              </label>
+              <input type="text" id="asunto" name="asunto" class="field-input" placeholder="Ej. Confirmación de inscripción"
+                autocomplete="off" aria-required="true" aria-describedby="error-asunto" />
+              <p class="field-error" id="error-asunto" role="alert"></p>
+            </div>
+
+            <!-- Mensaje -->
+            <div class="mb-6">
+              <label for="mensaje" class="field-label">
+                <svg class="h-4 w-4 text-accent-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></svg>
+                Mensaje
+              </label>
+              <textarea id="mensaje" name="mensaje" rows="5" class="field-input resize-y" placeholder="Escribe aquí el contenido que deseas enviar..."
+                aria-required="true" aria-describedby="error-mensaje"></textarea>
+              <p class="field-error" id="error-mensaje" role="alert"></p>
+            </div>
+
+            <button type="submit" id="submit-btn" class="btn-primary">
+              <span id="submit-spinner" class="hidden">
+                <svg class="h-5 w-5 animate-spin" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-90" fill="currentColor" d="M4 12a8 8 0 0 1 8-8V0C5.373 0 0 5.373 0 12h4Z"></path>
+                </svg>
+              </span>
+              <span id="submit-icon">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13" /><path d="M22 2 15 22l-4-9-9-4 20-7Z" /></svg>
+              </span>
+              <span id="submit-btn-text">Enviar correo</span>
+            </button>
+
+            <p class="mt-3 text-center text-xs text-navy-400">
+              Al enviar, tus datos se procesan mediante EmailJS. No almacenamos la información en este sitio.
+            </p>
+          </form>
+        </div>
+      </section>
+
+      <!-- Panel de estado -->
+      <aside class="space-y-6" aria-labelledby="status-title">
+        <div class="card animate-fade-in-up p-6">
+          <h2 id="status-title" class="text-base font-bold text-navy-900">Estado del servicio</h2>
+
+          <div class="mt-4 flex items-center gap-3 rounded-xl bg-navy-50 px-4 py-3">
+            <span id="service-status-dot" class="status-dot bg-navy-400" aria-hidden="true"></span>
+            <span id="service-status-text" class="text-sm font-semibold text-navy-700">Listo para enviar</span>
+          </div>
+
+          <ul class="mt-5 space-y-3 text-sm" id="status-steps">
+            <li class="flex items-start gap-3" data-step="ready">
+              <span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-navy-100 text-navy-500 text-[11px] font-bold">1</span>
+              <span class="text-navy-600">Listo para enviar</span>
+            </li>
+            <li class="flex items-start gap-3" data-step="validating">
+              <span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-navy-100 text-navy-500 text-[11px] font-bold">2</span>
+              <span class="text-navy-600">Validando datos</span>
+            </li>
+            <li class="flex items-start gap-3" data-step="sending">
+              <span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-navy-100 text-navy-500 text-[11px] font-bold">3</span>
+              <span class="text-navy-600">Enviando mensaje</span>
+            </li>
+            <li class="flex items-start gap-3" data-step="sent">
+              <span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-navy-100 text-navy-500 text-[11px] font-bold">4</span>
+              <span class="text-navy-600">Correo enviado</span>
+            </li>
+          </ul>
+
+          <div id="config-warning" class="mt-5 hidden rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-800">
+            <p class="font-semibold">Falta configurar EmailJS</p>
+            <p class="mt-1" id="config-warning-text">
+              Abre <code class="rounded bg-amber-100 px-1 py-0.5">src/script.js</code> y completa PUBLIC_KEY, SERVICE_ID y TEMPLATE_ID.
+            </p>
+          </div>
+        </div>
+
+        <div class="card p-6">
+          <h3 class="text-sm font-bold text-navy-900">¿Cómo funciona?</h3>
+          <ol class="mt-3 space-y-3 text-sm text-navy-600">
+            <li class="flex gap-3">
+              <span class="text-accent-600 font-bold">01</span>
+              Completas el formulario con tus datos.
+            </li>
+            <li class="flex gap-3">
+              <span class="text-accent-600 font-bold">02</span>
+              Validamos la información en el navegador.
+            </li>
+            <li class="flex gap-3">
+              <span class="text-accent-600 font-bold">03</span>
+              EmailJS envía el correo y te confirmamos el resultado.
+            </li>
+          </ol>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- ==================== PIE DE PÁGINA ==================== -->
+  <footer class="mt-auto border-t border-navy-100 bg-white/70">
+    <div class="mx-auto max-w-6xl px-4 py-8 sm:px-6">
+      <div class="flex flex-col items-center justify-between gap-4 sm:flex-row">
+        <div class="flex items-center gap-2 text-sm font-semibold text-navy-700">
+          <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-accent-500 to-navy-700 text-white">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></svg>
+          </span>
+          MailFlow
+        </div>
+        <p class="text-sm text-navy-500">Proyecto académico — Desarrollo Web Full Stack</p>
+      </div>
+      <p class="mt-4 text-center text-xs text-navy-400 sm:text-left">
+        Este sistema utiliza <span class="font-semibold text-navy-500">EmailJS</span> para procesar el envío de correos desde el navegador.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Contenedor de notificaciones tipo toast -->
+  <div id="toast-container" class="pointer-events-none fixed inset-x-0 bottom-0 z-50 flex flex-col items-center gap-3 px-4 pb-6 sm:items-end sm:pr-6" aria-live="polite" aria-atomic="false"></div>
+
+  <!-- EmailJS Browser SDK (v4) -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <!-- Flowbite (componentes interactivos) -->
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+  <!-- Lógica de la aplicación -->
+  <script src="./src/script.js" defer></script>
+</body>
+</html>

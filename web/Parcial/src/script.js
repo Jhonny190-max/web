@@ -21,9 +21,9 @@
      - NUNCA incluyas contraseñas de correo ni claves privadas aquí.
      ======================================================================= */
   const EMAILJS_CONFIG = {
-    PUBLIC_KEY: "TU_PUBLIC_KEY",
-    SERVICE_ID: "TU_SERVICE_ID",
-    TEMPLATE_ID: "TU_TEMPLATE_ID"
+    PUBLIC_KEY: "HINDKH_WSOJVVw7f_",
+    SERVICE_ID: "service_h2jsjo7",
+    TEMPLATE_ID: "template_gv1bevk"
   };
 
   const PLACEHOLDER_VALUES = ["", "TU_PUBLIC_KEY", "TU_SERVICE_ID", "TU_TEMPLATE_ID"];

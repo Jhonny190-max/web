@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================================================
+   MailFlow - Estilos personalizados
+   Se compilan dentro de dist/output.css
+   ========================================================= */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-navy-900 antialiased;
+    background-color: #f5f7fb;
+    background-image:
+      radial-gradient(1200px 600px at 10% -10%, rgba(99, 102, 241, 0.14), transparent 60%),
+      radial-gradient(1000px 500px at 100% 0%, rgba(47, 85, 152, 0.12), transparent 55%),
+      radial-gradient(800px 600px at 50% 120%, rgba(99, 102, 241, 0.08), transparent 60%);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  /* Superficie / tarjeta premium */
+  .card {
+    @apply rounded-2xl border border-navy-100 bg-white/90 shadow-soft backdrop-blur-sm;
+  }
+
+  /* Campos del formulario */
+  .field-label {
+    @apply mb-2 flex items-center gap-2 text-sm font-semibold text-navy-800;
+  }
+
+  .field-input {
+    @apply block w-full rounded-xl border border-navy-200 bg-white px-4 py-3 text-navy-900
+           placeholder-navy-300 shadow-sm transition
+           focus:border-accent-500 focus:outline-none focus:ring-4 focus:ring-accent-500/20
+           disabled:cursor-not-allowed disabled:bg-navy-50;
+  }
+
+  .field-input.is-invalid {
+    @apply border-red-500 focus:border-red-500 focus:ring-red-500/20;
+  }
+
+  .field-input.is-valid {
+    @apply border-emerald-500 focus:border-emerald-500 focus:ring-emerald-500/20;
+  }
+
+  .field-error {
+    @apply mt-1 hidden text-sm font-medium text-red-600;
+  }
+
+  .field-error.is-visible {
+    @apply block;
+  }
+
+  /* Boton principal */
+  .btn-primary {
+    @apply inline-flex w-full items-center justify-center gap-2 rounded-xl
+           bg-accent-600 px-6 py-3 text-base font-semibold text-white
+           shadow-soft transition duration-200
+           hover:-translate-y-0.5 hover:bg-accent-700 hover:shadow-glow
+           focus:outline-none focus:ring-4 focus:ring-accent-500/30
+           disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:translate-y-0;
+  }
+
+  /* Indicador de estado del servicio */
+  .status-dot {
+    @apply inline-block h-2.5 w-2.5 rounded-full;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-semibold;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-accent-600 to-navy-600 bg-clip-text text-transparent;
+  }
+}
